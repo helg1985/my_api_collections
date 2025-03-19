@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "01320e96-df5a-461f-8485-86c2048fe0a5",
+		"name": "CSV + JSON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42145553"
+	},
+	"item": [
+		{
+			"name": "Registr",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\":  \"{{email}}\" ,\r\n     \"password\":  \"{{password}}\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/register",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://task.test.ivi.ru/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Origin",
+						"value": "http://task.test.ivi.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "http://task.test.ivi.ru/login"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "Cookie",
+						"value": "session=eyJjc3JmX3Rva2VuIjoiMmViYTJmOWVmY2Y4MmRjZGY5NGZmMDA1NGZhZjUxMTA2YThmNGVhZSJ9.GqORvg.0YVVTRlHF6MZCGhR2T6E6h2fzs4"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "csrf_token",
+							"value": "IjJlYmEyZjllZmNmODJkY2RmOTRmZjAwNTRmYWY1MTEwNmE4ZjRlYWUi.GqOZSQ.H787LZD1GSp8Ux6UrQEjnOH9M9k",
+							"type": "text"
+						},
+						{
+							"key": "login",
+							"value": "log",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task.test.ivi.ru/login",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test",
+						"ivi",
+						"ru"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl 'http://task.test.ivi.ru/login' \\\r\n  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\r\n  -H 'Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7' \\\r\n  -H 'Cache-Control: max-age=0' \\\r\n  -H 'Connection: keep-alive' \\\r\n  -H 'Content-Type: application/x-www-form-urlencoded' \\\r\n  -b 'session=eyJjc3JmX3Rva2VuIjoiMmViYTJmOWVmY2Y4MmRjZGY5NGZmMDA1NGZhZjUxMTA2YThmNGVhZSJ9.GqORvg.0YVVTRlHF6MZCGhR2T6E6h2fzs4' \\\r\n  -H 'Origin: http://task.test.ivi.ru' \\\r\n  -H 'Referer: http://task.test.ivi.ru/login' \\\r\n  -H 'Upgrade-Insecure-Requests: 1' \\\r\n  -H 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36' \\\r\n  --data-raw 'csrf_token=IjJlYmEyZjllZmNmODJkY2RmOTRmZjAwNTRmYWY1MTEwNmE4ZjRlYWUi.GqOZSQ.H787LZD1GSp8Ux6UrQEjnOH9M9k&login=log&password=123' \\\r\n  --insecure"
+			},
+			"response": []
+		},
+		{
+			"name": "http://task.test.ivi.ru/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "your_login",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "your_password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task.test.ivi.ru/login",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test",
+						"ivi",
+						"ru"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl 'http://task.test.ivi.ru/login' \\\r\n  -X POST \\\r\n  -H 'Content-Type: multipart/form-data' \\\r\n  -F 'username=your_login' \\\r\n  -F 'password=your_password'"
+			},
+			"response": []
+		},
+		{
+			"name": "http://task.test.ivi.ru/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"your_login\",\"password\":\"your_password\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://task.test.ivi.ru/login",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test",
+						"ivi",
+						"ru"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl 'http://task.test.ivi.ru/login' \\\r\n  -X POST \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Accept: application/json' \\\r\n  --data-raw '{\"username\":\"your_login\",\"password\":\"your_password\"}' \\\r\n  --compressed"
+			},
+			"response": []
+		},
+		{
+			"name": "http://task.test.ivi.ru/second_task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Origin",
+						"value": "http://task.test.ivi.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "http://task.test.ivi.ru/second_task"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "Cookie",
+						"value": "session=eyJjc3JmX3Rva2VuIjoiMmViYTJmOWVmY2Y4MmRjZGY5NGZmMDA1NGZhZjUxMTA2YThmNGVhZSJ9.GqORvg.0YVVTRlHF6MZCGhR2T6E6h2fzs4"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "csrf_token",
+							"value": "IjJlYmEyZjllZmNmODJkY2RmOTRmZjAwNTRmYWY1MTEwNmE4ZjRlYWUi.GqRBGg.g3SyyeKn0QNoxXZZ_hXK3Y6KC3E",
+							"type": "text"
+						},
+						{
+							"key": "select",
+							"value": "Что я тут делаю?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task.test.ivi.ru/second_task",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test",
+						"ivi",
+						"ru"
+					],
+					"path": [
+						"second_task"
+					]
+				},
+				"description": "Generated from cURL: curl 'http://task.test.ivi.ru/second_task' \\\r\n  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\r\n  -H 'Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7' \\\r\n  -H 'Cache-Control: max-age=0' \\\r\n  -H 'Connection: keep-alive' \\\r\n  -H 'Content-Type: application/x-www-form-urlencoded' \\\r\n  -b 'session=eyJjc3JmX3Rva2VuIjoiMmViYTJmOWVmY2Y4MmRjZGY5NGZmMDA1NGZhZjUxMTA2YThmNGVhZSJ9.GqORvg.0YVVTRlHF6MZCGhR2T6E6h2fzs4' \\\r\n  -H 'Origin: http://task.test.ivi.ru' \\\r\n  -H 'Referer: http://task.test.ivi.ru/second_task' \\\r\n  -H 'Upgrade-Insecure-Requests: 1' \\\r\n  -H 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36' \\\r\n  --data-raw 'csrf_token=IjJlYmEyZjllZmNmODJkY2RmOTRmZjAwNTRmYWY1MTEwNmE4ZjRlYWUi.GqRBGg.g3SyyeKn0QNoxXZZ_hXK3Y6KC3E&select=%D0%A7%D1%82%D0%BE+%D1%8F+%D1%82%D1%83%D1%82+%D0%B4%D0%B5%D0%BB%D0%B0%D1%8E%3F' \\\r\n  --insecure"
+			},
+			"response": []
+		},
+		{
+			"name": "http://task.test.ivi.ru/second_task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Origin",
+						"value": "http://task.test.ivi.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "http://task.test.ivi.ru/second_task"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "Cookie",
+						"value": "session=eyJjc3JmX3Rva2VuIjoiMmViYTJmOWVmY2Y4MmRjZGY5NGZmMDA1NGZhZjUxMTA2YThmNGVhZSJ9.GqORvg.0YVVTRlHF6MZCGhR2T6E6h2fzs4"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "csrf_token",
+							"value": "IjJlYmEyZjllZmNmODJkY2RmOTRmZjAwNTRmYWY1MTEwNmE4ZjRlYWUi.GqRLBw.JlaFS4_eN0dL3d-QcEEXxJuOVUg",
+							"type": "text"
+						},
+						{
+							"key": "select",
+							"value": "да",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task.test.ivi.ru/second_task",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test",
+						"ivi",
+						"ru"
+					],
+					"path": [
+						"second_task"
+					]
+				},
+				"description": "Generated from cURL: curl 'http://task.test.ivi.ru/second_task' \\\r\n  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\r\n  -H 'Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7' \\\r\n  -H 'Cache-Control: max-age=0' \\\r\n  -H 'Connection: keep-alive' \\\r\n  -H 'Content-Type: application/x-www-form-urlencoded' \\\r\n  -b 'session=eyJjc3JmX3Rva2VuIjoiMmViYTJmOWVmY2Y4MmRjZGY5NGZmMDA1NGZhZjUxMTA2YThmNGVhZSJ9.GqORvg.0YVVTRlHF6MZCGhR2T6E6h2fzs4' \\\r\n  -H 'Origin: http://task.test.ivi.ru' \\\r\n  -H 'Referer: http://task.test.ivi.ru/second_task' \\\r\n  -H 'Upgrade-Insecure-Requests: 1' \\\r\n  -H 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36' \\\r\n  --data-raw 'csrf_token=IjJlYmEyZjllZmNmODJkY2RmOTRmZjAwNTRmYWY1MTEwNmE4ZjRlYWUi.GqRLBw.JlaFS4_eN0dL3d-QcEEXxJuOVUg&select=%D0%A7%D1%82%D0%BE+%D1%8F+%D1%82%D1%83%D1%82+%D0%B4%D0%B5%D0%BB%D0%B0%D1%8E%3F' \\\r\n  --insecure"
+			},
+			"response": []
+		}
+	]
+}
